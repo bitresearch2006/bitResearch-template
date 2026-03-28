@@ -1,0 +1,57 @@
+name: Research Paper Review
+description: Submit a research paper for review
+title: "[Paper]: "
+labels: ["paper-review"]
+assignees: []
+
+body:
+
+  - type: input
+    id: document_link
+    attributes:
+      label: Document Link (Google Drive)
+      placeholder: Paste Google Drive link
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Review Objective
+      description: What should reviewers focus on?
+      placeholder: Example - Validate methodology, results, novelty
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - High
+        - Medium
+        - Low
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Review Checklist
+      value: |
+        - [ ] Read full paper
+        - [ ] Check methodology
+        - [ ] Validate results
+        - [ ] Suggest improvements
+        - [ ] Provide summary
+
+  - type: textarea
+    id: reviewer_output
+    attributes:
+      label: Reviewer Output Format
+      value: |
+        Summary:
+        
+        Strengths:
+        
+        Weaknesses:
+        
+        Suggestions:
